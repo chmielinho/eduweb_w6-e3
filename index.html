@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Chat</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> </head>
+<style>
+	#chat {
+		max-width: 500px;
+		border: 1px solid #ccc;
+		padding: 10px 10px 45px;
+		margin: 20px auto;
+		border-radius: 5px;
+		box-shadow: 1px 1px 10px silver;
+		background: #e8e8e8;
+	}
+	
+	#chatWindow {
+		margin: 20px 0;
+		background: #fff;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		padding: 5px 0;
+		height: 300px;
+		overflow-y: auto;
+	}
+	
+	hr {
+		border: 1px solid #ccc;
+	}
+	.chatRow {
+		margin: 0;
+		padding: 5px;
+	}
+	.chatRow:nth-of-type(2n) {
+		background: #f7f5f5;
+	}
+	.status {
+		color: silver;
+		font-style: italic;
+	}
+	.message {
+		margin-left: 10px;
+	}
+</style>
+
+<body>
+	<div id="chat">
+		<div class="form-inline">
+			<div class="form-group">
+				<input type="text" class="form-control" id="yourName" placeholder="Podaj swoje imię"> </div>
+			<button class="btn btn-primary" id="join">Dołącz</button>
+		</div>
+		<hr>
+		<div id="chatWindow"> </div>
+		<div class="form-group">
+			<textarea id="message" rows="3" class="form-control" placeholder="Treść wiadomości..."></textarea>
+		</div>
+		<buton class="btn btn-primary pull-right" id="submit" disabled>Wyślij</buton>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
